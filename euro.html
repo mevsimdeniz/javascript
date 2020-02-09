@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<h1>Döviz Hesaplama</h1>
+
+<body>
+
+  <label for="tl"> Türk Lirası:</label>
+  <input type="text" id="tl">
+  <br />
+
+  <button id="" onclick="converter()">Çevir</button>
+
+  <div>
+    EURO:
+    <span id="sonuc"></span>
+  </div>
+
+
+  <script>
+    function converter() {
+      var tl = document.getElementById('tl').value;
+      var converter = tl / 6.33;
+      document.getElementById('sonuc').innerText = converter;
+    }
+  </script>
+
+</body>
+
+</html>

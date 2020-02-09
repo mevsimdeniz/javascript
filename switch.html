@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="trafik" onchange="degistiginde()">
+        <option value="kirmizi">Kırmızı</option>
+        <option value="sari">Sarı</option>
+        <option value="yesil">Yeşil</option>
+
+
+
+    </select>
+    <p id="sonuc"></p>
+    <script>
+        function degistiginde() {
+            var secilenDeger = document.getElementById('trafik').value;
+            switch (secilenDeger) {
+                case "kirmizi":
+                    document.getElementById('sonuc').innerText = "DUR!";
+
+                    break;
+                case "sari":
+                    document.getElementById('sonuc').innerText = "DİKKAT ET!";
+                    break;
+                case "yesil":
+                    document.getElementById('sonuc').innerText = "GEÇ!";
+                    break;
+                default:
+                    document.getElementById('sonuc').innerText = "HATALI SEÇİM";
+                    break;
+
+            }
+
+
+
+
+
+            /*
+                        if (secilenDeger === 'kirmizi') {
+                            document.getElementById('sonuc').innerText = "DUR!";
+
+                        } else if (secilenDeger === 'sari') {
+                            document.getElementById('sonuc').innerText = "DİKKAT ET!";
+                        } else if (secilenDeger === 'yesil') {
+                            document.getElementById('sonuc').innerText = "GEÇ!";
+                        } else {
+                            document.getElementById('sonuc').innerText = "HATALI SEÇİM";
+                        } */
+        }
+    </script>
+</body>
+
+</html>

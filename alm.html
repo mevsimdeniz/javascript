@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>Saat Kaç</h1>
+
+<body>
+    <label for="tr">Ülke Saati:</label>
+    <input type="text" name="" id="saat">
+
+    <p>
+        <input type="button" value="Saat Çevir" onclick="sayiSaat()" />
+
+    </p>
+    <p>
+        Almanya Saat: <span id="alm"></span>
+    </p>
+    <script>
+        function sayiSaat() {
+            var sonuc;
+            var deger = (document.getElementById('saat').value);
+            if (isNaN(deger)) {
+                sonuc = "Lütfen sayı girin!";
+            } else {
+                var saat = parseInt(deger);
+                saat = saat + 2;
+                sonuc = saat;
+            }
+            document.getElementById('alm').innerText = sonuc;
+        }
+    </script>
+</body>
+
+</html>

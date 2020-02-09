@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #buttonCiftMi {
+            color: tomato;
+            background-color: teal;
+            font-size: initial;
+            font-size: 30px;
+        }
+
+        #textSayi {
+            background-color: lightcoral;
+            width: 280px;
+            height: 30px;
+            font-size: 20px;
+            color: mediumvioletred;
+        }
+    </style>
+    <input type="text" id="textSayi" name="" />
+    <br />
+    <button id="buttonCiftMi" onclick="sayiCiftMi()">
+        Sayı çift mi tek mi ?
+
+    </button>
+    <br />
+    <span id="sonuc"></span>
+    <script>
+       
+       function sayiCiftMi() {
+            var girilenSayı = document.getElementById('textSayi').value;
+            var mesaj;
+            if (girilenSayı % 2 == 0) {
+                mesaj = "çifttir";
+            } else {
+                mesaj = "tektir";
+            }
+            document.getElementById('sonuc').innerText = mesaj;
+        }
+    </script>
+
+
+</body>
+
+</html>

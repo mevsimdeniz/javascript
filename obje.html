@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="olustur()">
+    <table id="urunTablosu">
+
+    </table>
+    <script>
+        var personel = {
+            ad: 'Mevsim',
+            soyad: 'Deniz',
+            yas: 27,
+            evliMi: false
+        };
+        
+        var urun = {
+            ad : "zara",
+            aciklama:'kadın kol saati',
+            orjinalFiyat:'100',
+            indirimOranı: 0.1,
+            yeniFiyat: 89
+        }
+
+        var urun1 = {
+            ad : "gizem",
+            aciklama:'kadın kol saati',
+            orjinalFiyat:'250',
+            indirimOranı: 0.1,
+            yeniFiyat: 90
+        }
+
+        var urun2 = {
+            ad : "deniz",
+            aciklama:'kadın kol saati',
+            orjinalFiyat:'110',
+            indirimOranı: 0.1,
+            yeniFiyat: 100
+        }
+        var urun3 = {
+            ad : "mevsim",
+            aciklama:'kadın kol saati',
+            orjinalFiyat:'300',
+            indirimOranı: 0.1,
+            yeniFiyat:290
+        }
+
+        var urunler = [urun,urun1,urun2,urun3];
+
+        function olustur() {
+            for (var i = 0; i < urunler.length; i++){ 
+                var urun =urunler[i];
+                var tr = document.createElement('tr');
+
+                var tdAd = document.createElement('td');
+                tdAd.innerText = urun.ad;
+
+                var tdAciklama =document.createElement('td');
+                tdAciklama.innerText = urun.aciklama;
+
+                var tdEski = document.createElement('td');
+                tdEski.innerText= urun.orjinalFiyat;
+
+                var tdYeni = document.createElement('td');
+                tdYeni.innerText = urun.yeniFiyat;
+              
+
+                tr.appendChild(tdAd);
+                tr.appendChild(tdAciklama);
+                tr.appendChild(tdEski);
+                tr.appendChild(tdYeni);
+
+                document.getElementById('urunTablosu').appendChild(tr);
+                
+            }
+        }
+    </script>
+</body>
+</html>

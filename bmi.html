@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <label for="kilo">Kilo</label>
+    <input id="kilo" type="text">
+     <br/>
+   <label for="boy">Boy</label>
+   <input id="boy" type="text">
+   <br/>
+   <label for="yag">Yağ </label>
+   <input id="yag" type="text">
+   <button id="" onclick="bmiHesapla()">Bmi Hesapla</button>
+   
+ <div>
+
+     Bmi Sonucu:
+     <span id="sonuc"></span>
+ </div>
+  
+ <script>
+     function bmiHesapla(){
+         var kilo =document.getElementById('kilo').value;
+         var boy =document.getElementById('boy').value;
+         var yag= document.getElementById('yag').value;
+         var bmi = kilo / (boy * boy) - yag;
+         document.getElementById('sonuc').innerText=bmi;
+     }
+ 
+ 
+ 
+ </script>
+   
+</body>
+</html>
+

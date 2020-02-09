@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="arrayNedir()">
+    <input type="text" name="" id="isim" />
+    <button onclick="ekle()">Ekle</button>
+    <p id="bilgi"></p>
+
+    <input type="text" name="" id="sayi" />
+    <button onclick="cevir()">Yazıya Çevir</button>
+    <p id="yazi"></p>
+
+
+
+    <script>
+        function arrayNedir() {
+            let mevsimler = ['ilkbahar', 'yaz', 'sonbahar', 'kış', 'test'];
+
+            console.log(mevsimler[0]);
+            console.log(mevsimler[mevsimler.length - 1]); //length =arreyin eleman sayısını verir
+        }
+        let insanlar = [];
+
+        function ekle() {
+            let isim = document.getElementById('isim').value;
+            insanlar.push(isim);
+            document.getElementById('bilgi').innerText = 'arrey içinde' + insanlar.length + 'eleman var';
+
+        }
+         function cevir() {
+             let birler = ["", "bir","iki","üç","dört","beş","altı","yedi","sekiz","dokuz"];
+             let onlar =["","on","yirmi","otuz","kırk","elli","altmış","yetmiş","seksen","doksan"];
+
+             let deger = document.getElementById('sayi').value;
+             let sayi =parseInt(deger);
+
+
+             //örnek =eğer sayı 59 ise 5 i alabilmek için 59 u 10 a bölmeliyiz. çıkan 5.9 değerinden sadece tam sayı kısmını yani
+             // 5 i almanız gerek. bu nedenle tekrar parseInt kullandık.
+
+             let onlarBasamagı = parseInt(sayi / 10);
+             console.log(onlarBasamagı);
+
+             let birlerBasamagı = sayi % 10 ;
+             console.log(birlerBasamagı);
+
+             let sonuc =onlar[onlarBasamagı] + birler[birlerBasamagı];
+             document.getElementById('yazi').innerText = sonuc;
+             
+         }
+    </script>
+</body>
+
+</html>

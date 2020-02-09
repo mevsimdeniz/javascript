@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li></li>
+    </ul>
+    <p id="yazi"></p>
+    <button onclick="dongu1()">Birinci Döngü</button>
+    <button onclick="dongu2()">İkinci Döngü</button>
+    <br />
+    <input type="text" id="textYas" />
+    <button onclick="yasEkle()">EKLE</button>
+
+    <span id="bilgi"></span>
+
+
+
+    <button onclick="buyuk()">En büyüğü bul</button>
+    <button onclick="kucuk()">En küçüğü bul</button>
+    <button onclick="orta()">Ortalamayı bul</button>
+    <br />
+    <span id="sonuc"></span>
+    <br />
+    <button onclick="goster()">Çarpım Tablosu Göster</button>
+    <br />
+    <span id="carpimTablosu"></span>
+
+    <script>
+        var menuElemanlari = ["kitap", "elektronik", "giyim", "kozmetik"];
+
+        function dongu1() {
+            for (let index = 0; index < 5; index++) {
+                document.getElementById('yazi').innerText += " merhaba ";
+
+            }
+        }
+
+        function dongu2() {
+            for (let index = 0; index < menuElemanlari.length; index++) {
+                var li = document.createElement('li');
+                li.innerText = menuElemanlari[index];
+                document.getElementById('menu').appendChild(li);
+            }
+
+        }
+
+
+        var yaslar = [];
+
+        function yasEkle() {
+            let yas = parseInt(document.getElementById('textYas').value);
+            yaslar.push(yas);
+            document.getElementById('bilgi').innerText = yaslar.length + " adet yaş girildi";
+
+        }
+
+        function buyuk() {
+            console.log(yaslar);
+            let enBuyuk = yaslar[0];
+            for (let i = 1; i < yaslar.length; i++) {
+                if (enBuyuk < yaslar[i]) {
+                    enBuyuk = yaslar[i];
+
+                }
+            }
+            document.getElementById('sonuc').innerText = enBuyuk;
+        }
+
+        function kucuk() {
+            let enKucuk = yaslar[0];
+            for (let index = 0; index < yaslar.length; index++) {
+                if (enKucuk > yaslar[index]) {
+                    enKucuk = yaslar[index];
+
+                }
+
+            }
+            document.getElementById('sonuc').innerText = enKucuk;
+
+
+        }
+
+        function orta() {
+            let toplam = 0;
+            for (let index = 0; index < yaslar.length; index++) {
+                toplam += yaslar[index];
+
+
+            }
+            let ortalama = toplam / yaslar.length;
+            document.getElementById('sonuc').innerText = ortalama;
+
+
+        }
+
+        function goster() {
+            for (let x = 1; x <= 9; x++) {
+                for (let y = 1; y <= 9; y++) {
+                    let p = document.createElement('p');
+                    let sonuc = x * y
+                    p.innerText = x + "x" + y + "=" + sonuc;
+                    //            3  x      7     =  21
+                    document.getElementById('carpimTablosu').append(p);
+                    console.log(x);
+
+
+
+                }
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>

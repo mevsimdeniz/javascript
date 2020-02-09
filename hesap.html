@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #mesaj {
+            color: crimson;
+        }
+
+        .mesajAlanı {
+            float: left;
+            width: 100px;
+            height: 50px;
+            border: 1px solid sienna;
+            border-radius: 2px;
+            background-color: slateblue;
+            padding: 20px;
+            margin: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="karsıla()">Tıklayınız..</button>
+    <button onclick="ekle()">Ekleyiniz..</button>
+    <button onclick="guncelle()">Güncelleyiniz..</button>
+    <br />
+    <div class="mesajAlanı">
+        <span id="mesaj"></span>
+    </div>
+    <div class="mesajAlanı">
+        <span id="eklendi"></span>
+    </div>
+    <div class="mesajAlanı">
+        <span id="guncellendi"></span>
+    </div>
+
+    <script>
+        function karsıla() {
+            mesajYaz('mesaj', 'Merhaba Dünya');
+
+        }
+
+        function ekle() {
+            mesajYaz('eklendi', 'Kayıt Başarıyla Eklendi');
+
+        }
+
+        function guncelle() {
+            mesajYaz('guncellendi', 'Güncelleme Tamamlandı');
+
+        }
+
+
+        function mesajYaz(id, yazılacakMetin) {
+            document.getElementById(id).innerText = yazılacakMetin;
+        }
+    </script>
+</body>
+
+</html>

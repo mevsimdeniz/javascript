@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="sayiTut()">
+    <h1>TAHMİN ET BAKALIM (:</h1>
+    <input type="text" value="" id="textTahmin" />
+    <input type="button" value="Tahmin et!" onclick="karsilastir()" />
+    <br />
+   
+    <span id="yon"></span>
+    <script>
+       var tutulanSayi = 0;
+       var tahminSayisi =0;
+
+        function sayiTut() {
+            tutulanSayi = Math.round(Math.random() * 100);
+            console.log(tutulanSayi)
+        }
+
+        function karsilastir() {
+            tahminSayisi++;
+            var tahmin = parseInt(document.getElementById('textTahmin').value);
+            if (tutulanSayi < tahmin) {
+                document.getElementById('yon').innerText = "Aşağı!";
+
+            } else if (tutulanSayi > tahmin) {
+                document.getElementById('yon').innerText = "Yukarı!";
+
+            } else {
+                document.getElementById('yon').innerText = tahminSayisi + "kerede Bildiniz!";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="" onclick="tiklandi()"> Tıkla</button>
+    <br />
+    <label for="kilo">Kilo</label>
+    <input id="kilo" type="text">
+    <br />
+    <label for="boy">Boy</label>
+    <input id="boy" type="text">
+    <button id="a" onclick="bmiHesapla()">bim hesapla</button>
+
+
+    <div>
+        Yazılacak mesaj:
+        <span id="ad"></span>
+    </div>
+    <div>
+
+        <h3>Bmi sonucu</h3>
+        <span id="sonuc"></span>
+    </div>
+    <script>
+        function tiklandi() {
+            // alert ("Merhaba Dünya");
+            document.getElementById('ad').innerText = "Merhaba Dünya";
+
+        }
+
+        function bmiHesapla() {
+            var kilo = document.getElementById('kilo').value;
+            var boy = document.getElementById('boy').value;
+            var bmi = kilo / (boy * boy);
+            console.log('bmi değeri' + bmi);
+            document.getElementById('sonuc').innerText = bmi;
+
+
+        }
+    </script>
+</body>
+
+</html>

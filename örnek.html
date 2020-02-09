@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+
+        <p>HAVA TAHMİN</p>
+        
+        <button onclick="myFunction()">BU GÜN</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+        function myFunction()
+        {
+            var x;
+            var d=new Date().getDay();
+            switch (d)
+            {
+                case 0:
+                    x="istanbul rainey";
+                    document.getElementById("one").style.display="block";
+                    break;
+                case 1:
+                    x="Today it's Monday";
+                    document.getElementById("two").style.display="block";
+                    break;
+                case 2:
+                    x="Today it's Tuesday";
+                    document.getElementById("three").style.display="block";
+                    break;
+                case 3:
+                    x="Today it's Wednesday";
+                    document.getElementById("four").style.display="block";
+                    break;
+                case 4:
+                    x="Today it's Thursday";
+                    document.getElementById("five").style.display="block";
+                    break;
+            }
+            document.getElementById("demo").innerHTML=x;
+        } 
+        </script>
+        
+        <img src="../ödevler/img/1.jpg" id="one" style="display:none"/>
+        <img src="../ödevler/img/2.png" id="two" style="display:none"/>
+        <img src="../ödevler/img/3.jpg" id="three" style="display:none"/>
+        <img src="../ödevler/img/4.jpg" id="four" style="display:none"/>
+        <img src="image5.png" id="five" style="display:none"/>
+        </body>
+        </html>
+</body>
+</html>

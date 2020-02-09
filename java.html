@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8/">
+    <title></title>
+</head>
+
+<body>
+    <label for="numberDogumYili">Doğum Yılınız:</label>
+    <input type="text" name="" value="" id="textDogumYili" />
+    <p><input type="button" name="" value="Yaşımı Hesapla" id="" onclick="yasHesapla()" />
+        <p>
+            Yaşınız: <span id="yas"></span>
+        </p>
+       
+        <script>
+            //butona basıldığında yaş hesapla işlemini yap
+            function yasHesapla() {
+                let dogumYili = document.getElementById('textDogumYili').value;
+
+                if (isNaN(dogumYili)) {
+                    document.getElementById('yas').innerText = 'Lütfen sayısal ifade giriniz';
+
+                } else {
+                    let yil = new Date().getFullYear();
+                    let yas = yil - dogumYili;
+                    document.getElementById('yas').innerText = yas;
+                    
+                }
+   
+                  }
+        </script>
+
+</body>
+
+</html>

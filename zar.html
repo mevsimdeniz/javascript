@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZAT AT</title>
+    <style>
+        div.zar {
+            float: left;
+            width: 35px;
+            background: rgb(122, 110, 110);
+            border: lightcoral 2px solid;
+            padding: 10px;
+            font-size: 25px;
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zar1" class="zar">0</div>
+   
+    <div id="zar2" class="zar">0</div>
+    <br />
+    <button onclick="zarAt()">Zar At</button>
+    <h2 id="status" style="clear:left;"></h2>
+
+    <script>
+        function zarAt() {
+            var zar1 = document.getElementById("zar1");
+            var zar2 = document.getElementById("zar2");
+            var status = document.getElementById('status');
+            var d1 = Math.floor(Math.random() * 6) + 1;
+            var d2 = Math.floor(Math.random() * 6) + 0;
+           
+            zar1.innerHTML = d1;
+            zar2.innerHTML = d2;
+           
+            if (d1 == d2) {
+                status.innerHTML = "BERABERE";
+            }else if (d1 > d2){
+                status.innerHTML = "Sol Kazandı";
+             }else 
+                 status.innerHTML = "Sağ Kazandı";
+            
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>

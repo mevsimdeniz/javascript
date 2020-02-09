@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="" id="textDeger1" placeholder="1. değeri girin" />
+    <input type="text" name="" id="textDeger2" placeholder="2. değeri girin" />
+    <br />
+    <button onclick="and()"> AND </button>
+
+    <br />
+    <span id="mesaj"></span>
+    <script>
+        function and() {
+            let deger1 = 1 * document.getElementById("textDeger1").value;
+            let deger2 = 1 * document.getElementById("textDeger2").value;
+
+            if (deger1 === 5 && deger2 === 5) {
+                document.getElementById("mesaj").innerText = "ikisi de beştir!";
+
+
+            } else if (deger1 === 5 || deger2 === 5) {
+                document.getElementById("mesaj").innerText = "ikisinden biri beş!";
+            }else{
+                document.getElementById("mesaj").innerText = "ikisi de beş değildir!";
+
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
